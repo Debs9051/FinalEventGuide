@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
-
-    <item android:title="Communicate">
+    <item android:title="Schedule">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_dayOne"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 1" />
+                <item
+                    android:id="@+id/nav_dayTwo"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 2" />
+                <item
+                    android:id="@+id/nav_dayThree"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 3" />
+                <item
+                    android:id="@+id/nav_dayFour"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 4" />
+                <item
+                    android:id="@+id/nav_dayFive"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 5" />
+                <item
+                    android:id="@+id/nav_daySix"
+                    android:icon="@drawable/ic_calender"
+                    android:title="Day 6" />
+            </group>
         </menu>
     </item>
-
 </menu>
