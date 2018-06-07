@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import events.tcs.com.events.R;
 import events.tcs.com.events.activity.MainActivity;
+import events.tcs.com.events.constant.ApplicationData;
 import events.tcs.com.events.data.Card;
 
 public class DayOneFragment extends Fragment {
@@ -32,7 +33,7 @@ public class DayOneFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //set values for Card
-        Card obj1 = new Card("Travel to TCS Office", "Travel to TCS Office – Gitanjali Park, complete security procedures", "10:00 AM – 11:00 AM ", "TCS", 0.0, 0.0, true);
+        Card obj1 = new Card("Travel to TCS Office", "Travel to TCS Office – Gitanjali Park, complete security procedures", "10:00 AM – 11:00 AM ", "TCS", ApplicationData.gpLat, ApplicationData.gpLan, true);
         Card obj2 = new Card("Welcome address and agenda discussion", "Welcome address, visit expectations and agenda discussion\n" +
                 "• Introduction with TCS Senior Management at Kolkata\n" +
                 "• Meet with TCS Offshore Team Leads\n" +
@@ -41,8 +42,8 @@ public class DayOneFragment extends Fragment {
         mActivity = getActivity();
         view = inflater.inflate(R.layout.fragment_day_one, container, false);
         LinearLayout parent = (LinearLayout) view.findViewById(R.id.layout_container);
-        createCardView(parent, obj1);
         createCardView(parent, obj2);
+        createCardView(parent, obj1);
         return view;
     }
 
