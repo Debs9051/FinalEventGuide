@@ -25,7 +25,7 @@ import events.tcs.com.events.activity.MainActivity;
 import events.tcs.com.events.constant.ApplicationData;
 import events.tcs.com.events.data.Card;
 
-public class DayOneFragment extends Fragment {
+public class DayThreeFragment extends Fragment {
     private Activity mActivity;
     private View view;
 
@@ -60,7 +60,7 @@ public class DayOneFragment extends Fragment {
 //        createCardView(parent, obj6);
 //        createCardView(parent, obj5);
 //        createCardView(parent, obj4);
-       createCardView(parent, obj3);
+        createCardView(parent, obj3);
         createCardView(parent, obj2);
         createCardView(parent, obj1);
         return view;

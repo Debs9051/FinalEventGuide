@@ -20,6 +20,7 @@ import com.synnapps.carouselview.ImageListener;
 
 import events.tcs.com.events.R;
 import events.tcs.com.events.fragment.DayOneFragment;
+import events.tcs.com.events.fragment.DayThreeFragment;
 import events.tcs.com.events.fragment.DayTwoFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -106,7 +107,15 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
             xfragmentTransaction.replace(R.id.layout_main, new DayTwoFragment()).commit();
             toggleHome(false);
-        } else {
+        }
+
+        else if (selectedId == R.id.nav_dayThree) {
+            FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
+            xfragmentTransaction.replace(R.id.layout_main, new DayThreeFragment()).commit();
+            toggleHome(false);
+        }
+
+        else {
             toggleHome(true);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

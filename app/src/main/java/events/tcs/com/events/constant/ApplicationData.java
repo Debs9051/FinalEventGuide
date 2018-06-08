@@ -9,5 +9,7 @@ public interface ApplicationData {
     Double hotelLan = 0.0;
     Double gpLat = 22.58148;
     Double gpLan = 88.48741;
+    Double noLan=0.0;
+    Double noLat=0.0;
 
 }
