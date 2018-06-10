@@ -32,9 +32,9 @@ public class DayThreeFragment extends Fragment {
         //set values for Card
         Card obj1 = new Card("Travel to TCS Office", "Travel to TCS Office – Gitanjali Park, complete security procedures", "9:00 AM – 10:00 AM ", "TCS", 0.0, 0.0, true);
         Card obj2 = new Card("BI Migration Project", "BI Migration Project Workshop with team", "10:00 AM – 11:00 AM ", "David and TCS team", 0.0, 0.0, false);
-        Card obj3 = new Card("SAP AMS Workshop", "SAP AMS Workshop with team", "10:00 AM - 11:00AM", "Stephane and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj3 = new Card("SAP AMS Workshop", "SAP AMS Workshop with team", "10:00 AM – 11:00AM", "Stephane and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj4 = new Card("Presentation", "Presentation on TCS Capabilities in SuccessFactor", "11:00 AM – 12:30 PM ", "TCS SAP COE", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj5 = new Card("Lunch @ TCS Office", "Lunch and personal Time/Mails etc", "12:00 PM - 2:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj5 = new Card("Lunch @ TCS Office", "Lunch and personal Time/Mails etc", "12:00 PM – 2:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj6 = new Card("Innovation done by the Account Team/Ideathon/Award Ceremony", "In-house Innovation done by the Account Team/Ideathon/Award Ceremony", "02:00 PM – 03:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj7 = new Card("Travel to Airport for Delhi", "Travel to Airport for Delhi", "03:30 PM – 4:30 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         mActivity = getActivity();

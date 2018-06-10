@@ -35,14 +35,14 @@ public class DayOneFragment extends Fragment {
                 "• Introduction with TCS Senior Management at Kolkata\n" +
                 "• Meet with TCS Offshore Team Leads\n" +
                 "Expectations from the Visit\n", "11:00 AM – 11:45 AM ", "TCS and Sephora", 0.0, 0.0, false);
-        Card obj3 = new Card("Tea/Coffee", "Tea/Coffee", "11:45 AM - 12:00 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj3 = new Card("Tea/Coffee", "Tea/Coffee", "11:45 AM – 12:00 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj4 = new Card("Sephora Account Review", "Sephora Account Review \n" + "• Relationship Journey\n" + "• Meet offshore Team – LVMH Floor Visit\n", "12:00 PM – 01:30 PM", "Kaushik", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj5 = new Card("Lunch", "Lunch @ TCS Office \n" +
-                "Personal Time/Mails etc", "01:30 PM - 03:00 PM", "", ApplicationData.noLat, ApplicationData.noLan, false);
+                "Personal Time/Mails etc", "01:30 PM – 03:00 PM", "", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj6 = new Card("Floor-Walk", "End to End Service Delivery Experience for a Large (multi-country) Home Improvement Retailer – (Kingfisher) – SAP Transformation and AMS full services play\n", "03:00 PM – 04:00 PM", "Aniruddha Bhattacharjee\n", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj7 = new Card("Tea/Coffee", "Tea/Coffee@ TCS Office", "04:00 PM – 04:15 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj8 = new Card("BI Migration Project", "BI Migration Project Workshop with team", "04:15 PM  - 05:45 PM", "David and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj9 = new Card("SAP Project", "SAP AMS Workshop with team", "04:15 PM  - 05:45 PM", "Stephane and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj8 = new Card("BI Migration Project", "BI Migration Project Workshop with team", "04:15 PM – 05:45 PM", "David and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj9 = new Card("SAP Project", "SAP AMS Workshop with team", "04:15 PM – 05:45 PM", "Stephane and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj10 = new Card("Wrap", "Wrap-up for the day", "05:45 PM – 06:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj11 = new Card("Travel to Hotel", "INFORMAL DINNER – SPECIALIZED LOCAL FOOD", "06:00 PM – 06:30 PM", "TCS", ApplicationData.hotelLat, ApplicationData.hotelLat, true);
         mActivity = getActivity();

@@ -47,18 +47,18 @@ public class DayTwoFragment extends Fragment {
             case "Stephane":
                 obj2.setHeading("SAP AMS Workshop");
                 obj2.setHeadingDesc("SAP AMS Workshop with team");
-                obj2.setTimming("10:00 AM - 11:00AM");
+                obj2.setTimming("10:00 AM – 11:00AM");
                 obj2.setOwner("Stephane and TCS team");
                 break;
         }
         Card obj4 = new Card("TCS Capability in BIG DATA and Analytics", "TCS Capability in BIG DATA and Analytics\n" +
                 "Case Studies on development projects – preferably Qlikview/Qliksense\n", "11:00 AM – 12:00 PM ", "Sudip NagB", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj5 = new Card("Tea/Coffee", "Tea/Coffee", "12:00 PM - 12:15 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj5 = new Card("Tea/Coffee", "Tea/Coffee", "12:00 PM – 12:15 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj6 = new Card("Presentation on TCS Assurance Services - Capability", "Presentation on TCS Assurance Services - Capability", "12:15 PM – 01:30 PM", "Janaki Mishra", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj7 = new Card("Lunch @ TCS Office", "Lunch @ TCS Office, personal Time/Mails etc\n", "01:30 PM - 03:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj7 = new Card("Lunch @ TCS Office", "Lunch @ TCS Office, personal Time/Mails etc\n", "01:30 PM – 03:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj8 = new Card("Floor Walk", "Application Command Center Visit – Large UK based Supermarket Chain\n" + "<B>(Morrisons)</B>", "03:00 PM – 04:00 PM", "Arijit Saha", ApplicationData.noLat, ApplicationData.noLan, false);
         Card obj9 = new Card("Kolkata City Tour", "Travel to famous places in Kolkata", "04:00 PM – 07:30 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj10 = new Card("Dinner", "Invitation for a dinner at ITC Sonar with TCS ", "07:30 PM - 10:00 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj10 = new Card("Dinner", "Invitation for a dinner at ITC Sonar with TCS ", "07:30 PM – 10:00 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
         createCardView(parent, obj1);
         createCardView(parent, obj2);
         createCardView(parent, obj4);
