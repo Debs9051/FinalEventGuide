@@ -21,53 +21,32 @@ import events.tcs.com.events.R;
 import events.tcs.com.events.constant.ApplicationData;
 import events.tcs.com.events.data.Card;
 import events.tcs.com.events.utils.AppUtils;
-import events.tcs.com.events.utils.SharedPreferencesManager;
 
-public class DayTwoFragment extends Fragment {
+public class DayThreeFragment extends Fragment {
     private Activity mActivity;
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //set values for Card
+        Card obj1 = new Card("Travel to TCS Office", "Travel to TCS Office – Gitanjali Park, complete security procedures", "9:00 AM – 10:00 AM ", "TCS", 0.0, 0.0, true);
+        Card obj2 = new Card("BI Migration Project", "BI Migration Project Workshop with team", "10:00 AM – 11:00 AM ", "David and TCS team", 0.0, 0.0, false);
+        Card obj3 = new Card("SAP AMS Workshop", "SAP AMS Workshop with team", "10:00 AM - 11:00AM", "Stephane and TCS team", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj4 = new Card("Presentation", "Presentation on TCS Capabilities in SuccessFactor", "11:00 AM – 12:30 PM ", "TCS SAP COE", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj5 = new Card("Lunch @ TCS Office", "Lunch and personal Time/Mails etc", "12:00 PM - 2:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj6 = new Card("Innovation done by the Account Team/Ideathon/Award Ceremony", "In-house Innovation done by the Account Team/Ideathon/Award Ceremony", "02:00 PM – 03:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
+        Card obj7 = new Card("Travel to Airport for Delhi", "Travel to Airport for Delhi", "03:30 PM – 4:30 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
         mActivity = getActivity();
         view = inflater.inflate(R.layout.fragment_day_one, container, false);
         LinearLayout parent = (LinearLayout) view.findViewById(R.id.layout_container);
-        String user = SharedPreferencesManager.readSharedPref(mActivity, ApplicationData.USER_KEY);
-        //set values for Card
-        Card obj1 = new Card("Travel to TCS Office", "Travel to TCS Office – Gitanjali Park, complete security procedures", "9:00 AM – 10:00 AM ", "TCS", 0.0, 0.0, true);
-        Card obj2 = new Card();
-        switch (user) {
-            case "David":
-                obj2.setHeading("BI Migration Project");
-                obj2.setHeadingDesc("BI Migration Project Workshop with team");
-                obj2.setTimming("10:00 AM – 11:00 AM");
-                obj2.setOwner("David and TCS team");
-                break;
-            case "Stephane":
-                obj2.setHeading("SAP AMS Workshop");
-                obj2.setHeadingDesc("SAP AMS Workshop with team");
-                obj2.setTimming("10:00 AM - 11:00AM");
-                obj2.setOwner("Stephane and TCS team");
-                break;
-        }
-        Card obj4 = new Card("TCS Capability in BIG DATA and Analytics", "TCS Capability in BIG DATA and Analytics\n" +
-                "Case Studies on development projects – preferably Qlikview/Qliksense\n", "11:00 AM – 12:00 PM ", "Sudip NagB", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj5 = new Card("Tea/Coffee", "Tea/Coffee", "12:00 PM - 12:15 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj6 = new Card("Presentation on TCS Assurance Services - Capability", "Presentation on TCS Assurance Services - Capability", "12:15 PM – 01:30 PM", "Janaki Mishra", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj7 = new Card("Lunch @ TCS Office", "Lunch @ TCS Office, personal Time/Mails etc\n", "01:30 PM - 03:00 PM", "N/A", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj8 = new Card("Floor Walk", "Application Command Center Visit – Large UK based Supermarket Chain\n" + "<B>(Morrisons)</B>", "03:00 PM – 04:00 PM", "Arijit Saha", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj9 = new Card("Kolkata City Tour", "Travel to famous places in Kolkata", "04:00 PM – 07:30 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
-        Card obj10 = new Card("Dinner", "Invitation for a dinner at ITC Sonar with TCS ", "07:30 PM - 10:00 PM", "TCS", ApplicationData.noLat, ApplicationData.noLan, false);
         createCardView(parent, obj1);
         createCardView(parent, obj2);
+        createCardView(parent, obj3);
         createCardView(parent, obj4);
         createCardView(parent, obj5);
         createCardView(parent, obj6);
         createCardView(parent, obj7);
-        createCardView(parent, obj8);
-        createCardView(parent, obj9);
-        createCardView(parent, obj10);
         return view;
     }
 
@@ -98,7 +77,7 @@ public class DayTwoFragment extends Fragment {
         btnNotify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AppUtils.scheduleNotification(AppUtils.getNotification(cardObject.getHeading(), cardObject.getHeadingDesc(), mActivity), "2018/06/19 " + cardObject.getTimming().substring(0, cardObject.getTimming().indexOf("–") - 1), mActivity);
+                AppUtils.scheduleNotification(AppUtils.getNotification(cardObject.getHeading(), cardObject.getHeadingDesc(), mActivity), "2018/06/20 " + cardObject.getTimming().substring(0, cardObject.getTimming().indexOf("–") - 1), mActivity);
             }
         });
         if (cardObject.isTravel()) {
@@ -130,5 +109,4 @@ public class DayTwoFragment extends Fragment {
         });
         parentLinearLayout.addView(cardView, parentLinearLayout.getChildCount());
     }
-
 }

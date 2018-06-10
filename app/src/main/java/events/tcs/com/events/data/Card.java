@@ -11,6 +11,15 @@ public class Card {
     private String owner;
     private Double Latitude, Longitude;
 
+    public Card() {
+        this.heading = "";
+        this.headingDesc = "";
+        this.timming = "";
+        this.owner = "";
+        Latitude = 0.0;
+        Longitude = 0.0;
+        this.isTravel = false;
+    }
     public Card(String heading, String headingDesc, String timming, String owner, Double latitude, Double longitude, boolean isTravel) {
         this.heading = heading;
         this.headingDesc = headingDesc;

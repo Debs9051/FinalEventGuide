@@ -6,27 +6,15 @@
                 <item
                     android:id="@+id/nav_dayOne"
                     android:icon="@drawable/ic_calender"
-                    android:title="Day 1" />
+                    android:title="18th June, Day 1" />
                 <item
                     android:id="@+id/nav_dayTwo"
                     android:icon="@drawable/ic_calender"
-                    android:title="Day 2" />
+                    android:title="19th June, Day 2" />
                 <item
                     android:id="@+id/nav_dayThree"
                     android:icon="@drawable/ic_calender"
-                    android:title="Day 3" />
-                <item
-                    android:id="@+id/nav_dayFour"
-                    android:icon="@drawable/ic_calender"
-                    android:title="Day 4" />
-                <item
-                    android:id="@+id/nav_dayFive"
-                    android:icon="@drawable/ic_calender"
-                    android:title="Day 5" />
-                <item
-                    android:id="@+id/nav_daySix"
-                    android:icon="@drawable/ic_calender"
-                    android:title="Day 6" />
+                    android:title="20th June, Day 3" />
             </group>
         </menu>
     </item>

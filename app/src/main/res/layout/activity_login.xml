@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@drawable/ic_background1"
     android:weightSum="10">
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,48 +13,71 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:id="@+id/rl_user1">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_user1"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/imageView3" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:background="@drawable/rect"
+                android:padding="40dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/app_h3_size"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:id="@+id/textViewUserName1"
-                android:layout_below="@+id/imageView3"
-                android:layout_alignParentStart="true" />
+                android:layout_centerInParent="true"
+                android:id="@+id/rl_user1">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/ic_stephane"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/app_h3_size"
+                    android:textStyle="bold"
+                    android:id="@+id/textViewUserName1"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="Stephane"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:id="@+id/rl_user2">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_user2"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/imageView4" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:background="@drawable/rect"
+                android:padding="40dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/app_h3_size"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:id="@+id/textViewUserName2"
-                android:layout_below="@id/imageView4"
-                android:layout_alignParentStart="true" />
+                android:layout_centerInParent="true"
+                android:id="@+id/rl_user2">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/ic_david"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:text="David"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/app_h3_size"
+                    android:textStyle="bold"
+                    android:id="@+id/textViewUserName2"
+                    android:layout_below="@+id/imageView4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
 
@@ -71,7 +94,6 @@
             android:text="@string/action_login"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 </LinearLayout>

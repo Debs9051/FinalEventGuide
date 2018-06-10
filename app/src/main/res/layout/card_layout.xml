@@ -98,8 +98,8 @@
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorPrimary"
                     android:layout_marginRight="10dp"
-                    android:paddingRight="5dp"
-                    android:paddingLeft="5dp" />
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp" />
 
                 <Button
                     android:visibility="gone"
@@ -110,8 +110,8 @@
                     android:text="Navigate To this Locaton"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorPrimary"
-                    android:paddingRight="5dp"
-                    android:paddingLeft="5dp" />
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

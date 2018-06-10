@@ -14,13 +14,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
 import events.tcs.com.events.R;
+import events.tcs.com.events.constant.ApplicationData;
 import events.tcs.com.events.fragment.DayOneFragment;
+import events.tcs.com.events.fragment.DayThreeFragment;
 import events.tcs.com.events.fragment.DayTwoFragment;
+import events.tcs.com.events.utils.SharedPreferencesManager;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity
     private FragmentManager mFragmentManager;
     private View viewHome;
     private FrameLayout viewDays;
+    private TextView textViewWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void initView() {
+        String user = SharedPreferencesManager.readSharedPref(mActivity, ApplicationData.USER_KEY);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -59,6 +65,9 @@ public class MainActivity extends AppCompatActivity
         carouselView.setImageListener(imageListener);
         viewHome = findViewById(R.id.layout_home);
         viewDays = findViewById(R.id.layout_main);
+        textViewWelcome = (TextView) findViewById(R.id.tv_welcomeUser);
+        if (user != "")
+            textViewWelcome.setText("Hi, " + user);
     }
 
     ImageListener imageListener = new ImageListener() {
@@ -92,6 +101,7 @@ public class MainActivity extends AppCompatActivity
             viewDays.setVisibility(View.VISIBLE);
         }
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -105,6 +115,10 @@ public class MainActivity extends AppCompatActivity
         } else if (selectedId == R.id.nav_dayTwo) {
             FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
             xfragmentTransaction.replace(R.id.layout_main, new DayTwoFragment()).commit();
+            toggleHome(false);
+        } else if (selectedId == R.id.nav_dayThree) {
+            FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
+            xfragmentTransaction.replace(R.id.layout_main, new DayThreeFragment()).commit();
             toggleHome(false);
         } else {
             toggleHome(true);

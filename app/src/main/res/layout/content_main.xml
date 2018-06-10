@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="events.tcs.com.events.activity.MainActivity"
+    android:background="@drawable/ic_background1"
     tools:showIn="@layout/app_bar_main">
 
     <android.support.constraint.ConstraintLayout
@@ -15,7 +16,7 @@
 
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/carouselView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="250dp"
             app:fillColor="#FFFFFFFF"
             app:pageColor="#00000000"
@@ -26,31 +27,45 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/client_welcome"
-        android:textSize="@dimen/app_h1_size"
-        android:textStyle="bold|italic"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carouselView"
-        android:paddingLeft="@dimen/fab_margin"
-        android:paddingRight="@dimen/fab_margin"
-        android:paddingTop="@dimen/fab_margin" />
 
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kolkata_desc"
-            android:textSize="@dimen/app_h3_size"
-            android:textStyle="italic"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
-            android:paddingLeft="@dimen/fab_margin"
-            android:paddingRight="@dimen/fab_margin" />
+            app:layout_constraintTop_toBottomOf="@+id/carouselView"
+            android:padding="@dimen/fab_margin"
+            android:orientation="vertical"
+            android:background="@drawable/rect">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tv_welcomeUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Stephane"
+                android:textSize="@dimen/app_h1_size"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_welcome"
+                android:textSize="@dimen/app_h1_size"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kolkata_desc"
+                android:textSize="@dimen/app_h3_size"
+                android:textStyle="italic" />
+        </LinearLayout>
+
     </android.support.constraint.ConstraintLayout>
 
     <FrameLayout
